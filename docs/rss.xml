@@ -1,2 +1,26 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://Meekdai.github.io/Gmeek-template</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Meekdai.github.io/Gmeek-template</link></image><lastBuildDate>Thu, 14 Mar 2024 09:17:29 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>请接着之后的安装步骤执行</title><link>https://Meekdai.github.io/Gmeek-template/post/qing-jie-zhao-zhi-hou-de-an-zhuang-bu-zou-zhi-xing.html</link><description>如果你点击了`READM.md`的链接后，看到了这个页面，请继续之后的安装步骤执行。</description><guid isPermaLink="true">https://Meekdai.github.io/Gmeek-template/post/qing-jie-zhao-zhi-hou-de-an-zhuang-bu-zou-zhi-xing.html</guid><pubDate>Thu, 14 Mar 2024 09:15:10 +0000</pubDate></item><item><title>这是Gmeek模板仓库</title><link>https://Meekdai.github.io/Gmeek-template/post/zhe-shi-Gmeek-mo-ban-cang-ku.html</link><description>通过这个模板创建库，可以大大减少部署Gmeek博客的配置步骤。</description><guid isPermaLink="true">https://Meekdai.github.io/Gmeek-template/post/zhe-shi-Gmeek-mo-ban-cang-ku.html</guid><pubDate>Wed, 20 Dec 2023 07:42:24 +0000</pubDate></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://fireLhq.github.io</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://fireLhq.github.io</link></image><lastBuildDate>Tue, 04 Aug 2026 00:44:53 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>如何在Linux服务器中安装Clash</title><link>https://fireLhq.github.io/post/ru-he-zai-Linux-fu-wu-qi-zhong-an-zhuang-Clash.html</link><description># 文章以Ubuntu 22.04 Server为例
+
+## 前言
+
+该方法建立在使用过**Clash for Windows**的基础上
+
+## 步骤
+
+1. 取出Windows设备配置
+2. 安装和配置Clash for Linux
+3. 注册为系统服务
+4. 安装浏览器UI界面并在线管理Clash
+
+## 步骤1：取出配置
+
+准备好两个文件：
+
+1. Country.mmdb
+2. profiles/xxxxxxxx.yml
+
+&lt;img width='1068' height='760' alt='Image' src='https://github.com/user-attachments/assets/b5583baf-8969-422b-a391-64aaa5c8c739' /&gt;
+
+&lt;img width='770' height='288' alt='Image' src='https://github.com/user-attachments/assets/42e7c0af-1eea-41a1-8775-8f8806d0c6e9' /&gt;
+
+**注** yml文件可能有多个，原因是你之前使用过多个配置；如果不确定哪个有效，可以先选中`Clash`左侧的`Profiles`（配置）切换到配置页面，然后右键点击“有效”的配置再点击`Show in folder`（在资源管理器中显示），即可在资源管理器中定位到有效yml文件。</description><guid isPermaLink="true">https://fireLhq.github.io/post/ru-he-zai-Linux-fu-wu-qi-zhong-an-zhuang-Clash.html</guid><pubDate>Tue, 04 Aug 2026 00:44:24 +0000</pubDate></item></channel></rss>
