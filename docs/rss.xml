@@ -1,5 +1,29 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>海哥的博客</title><link>https://fireLhq.github.io</link><description>分享实用、有趣的软件DIY教程</description><copyright>海哥的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://fireLhq.github.io</link></image><lastBuildDate>Tue, 04 Aug 2026 00:58:50 +0000</lastBuildDate><managingEditor>海哥的博客</managingEditor><ttl>60</ttl><webMaster>海哥的博客</webMaster><item><title>如何在Linux服务器中安装Clash</title><link>https://fireLhq.github.io/post/ru-he-zai-Linux-fu-wu-qi-zhong-an-zhuang-Clash.html</link><description># 文章以Ubuntu 22.04 Server为例
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>海哥的博客</title><link>https://fireLhq.github.io</link><description>分享实用、有趣的软件DIY教程</description><copyright>海哥的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://fireLhq.github.io</link></image><lastBuildDate>Tue, 04 Aug 2026 01:54:40 +0000</lastBuildDate><managingEditor>海哥的博客</managingEditor><ttl>60</ttl><webMaster>海哥的博客</webMaster><item><title>如何在Linux服务器中安装“Clash Verge（内核为Mihomo）”</title><link>https://fireLhq.github.io/post/ru-he-zai-Linux-fu-wu-qi-zhong-an-zhuang-%E2%80%9CClash%20Verge%EF%BC%88-nei-he-wei-Mihomo%EF%BC%89%E2%80%9D.html</link><description># 文章以Ubuntu 22.04 Server为例
+
+## 前言
+
+Mihomo是Clash Verge的内核，因此该方法建立在使用过**Clash Verge Rev**的基础上
+
+## 步骤
+
+1. 取出Windows设备配置
+2. 安装和配置Mihomo for Linux
+3. 注册为系统服务
+4. 安装浏览器UI界面并在线管理Mihomo
+
+## 步骤1：取出配置
+
+准备好两个文件，位于：C:\Users\用户名\AppData\Roaming\io.github.clash-verge-rev.clash-verge-rev下
+
+1. Country.mmdb
+2. profiles/xxxxxxxx.yaml
+
+&lt;img width='804' height='468' alt='Image' src='https://github.com/user-attachments/assets/765471fd-4d04-488c-bdd6-9fa8d2c40f35' /&gt;
+
+&lt;img width='771' height='374' alt='Image' src='https://github.com/user-attachments/assets/7a99e3be-9419-492f-8d96-f2ce03b30799' /&gt;
+
+**注** 将用户名替换为自己电脑的实际用户名。</description><guid isPermaLink="true">https://fireLhq.github.io/post/ru-he-zai-Linux-fu-wu-qi-zhong-an-zhuang-%E2%80%9CClash%20Verge%EF%BC%88-nei-he-wei-Mihomo%EF%BC%89%E2%80%9D.html</guid><pubDate>Tue, 04 Aug 2026 01:51:59 +0000</pubDate></item><item><title>如何在Linux服务器中安装Clash</title><link>https://fireLhq.github.io/post/ru-he-zai-Linux-fu-wu-qi-zhong-an-zhuang-Clash.html</link><description># 文章以Ubuntu 22.04 Server为例
 
 ## 前言
 
