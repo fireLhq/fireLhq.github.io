@@ -1,5 +1,88 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>海哥的博客</title><link>https://fireLhq.github.io</link><description>分享实用、有趣的软件DIY教程</description><copyright>海哥的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://fireLhq.github.io</link></image><lastBuildDate>Tue, 04 Aug 2026 01:54:40 +0000</lastBuildDate><managingEditor>海哥的博客</managingEditor><ttl>60</ttl><webMaster>海哥的博客</webMaster><item><title>如何在Linux服务器中安装“Clash Verge（内核为Mihomo）”</title><link>https://fireLhq.github.io/post/ru-he-zai-Linux-fu-wu-qi-zhong-an-zhuang-%E2%80%9CClash%20Verge%EF%BC%88-nei-he-wei-Mihomo%EF%BC%89%E2%80%9D.html</link><description># 文章以Ubuntu 22.04 Server为例
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>海哥的博客</title><link>https://fireLhq.github.io</link><description>分享实用、有趣的软件DIY教程</description><copyright>海哥的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://fireLhq.github.io</link></image><lastBuildDate>Tue, 04 Aug 2026 02:15:12 +0000</lastBuildDate><managingEditor>海哥的博客</managingEditor><ttl>60</ttl><webMaster>海哥的博客</webMaster><item><title>如何在Dev-C++中使用EasyX图形库</title><link>https://fireLhq.github.io/post/ru-he-zai-Dev-C%2B%2B-zhong-shi-yong-EasyX-tu-xing-ku.html</link><description># Dev-C++配置EasyX
+
+## 1.下载EasyX库
+
+打开官网：[EasyX Graphics Library for C++](https://easyx.cn/)
+
+&lt;img width='1910' height='896' alt='Image' src='https://github.com/user-attachments/assets/f9697f40-adc9-4b50-ab4d-f8ec3816d8a8' /&gt;
+
+&lt;img width='1910' height='896' alt='Image' src='https://github.com/user-attachments/assets/df22558e-1046-4353-8d6f-803e6b303567' /&gt;
+
+&lt;img width='1910' height='896' alt='Image' src='https://github.com/user-attachments/assets/27876219-70c2-443b-a15f-848bd819dfbe' /&gt;
+
+&lt;img width='1910' height='896' alt='Image' src='https://github.com/user-attachments/assets/8bfcd848-d891-4d92-9659-42f6a35f121d' /&gt;
+
+下载后会得到**easyx4mingw_25.9.10.zip**文件，内部结构如下
+
+&lt;img width='414' height='155' alt='Image' src='https://github.com/user-attachments/assets/cc23c21f-e67e-44cc-aa41-1e2af42b5389' /&gt;
+
+将文件解压并重命名后放到一个自己能找到的地方，如放到**D:\EasyX**，该文件下就直接放置上面几个文件夹：
+
+```text
+D:\EasyX\
+├──include\ #头文件，程序引用的入口
+├──lib32\ #32位库文件，用于32位MinGW GCC
+├──lib64\ #64位库文件，用于64位MinGW GCC
+├──lib-for-devcpp_5.4.0\ #32位库文件，用于5.4.0版Dev-C++
+└──readme.txt #说明文档
+```
+
+## 2.在Dev-C++中引入库、C++包含文件
+
+这里以**小熊猫Dev-C++ 6.7.5**为例，其它版本如**原版Dev-C++ 5.11**操作类似
+
+依次点击：**工具→编译选项→编译器配置→目录**
+
+### 2.1引入库
+
+在**库**中添加目录：**lib64**，并移至顶部，注意根据自己实际**MinGW**和**Dev-C++版本**选择
+引入后如：**D:\EasyX\lib64**
+
+&lt;img width='1920' height='1017' alt='Image' src='https://github.com/user-attachments/assets/2dd5206b-4a8c-4044-8280-a402ddafffe7' /&gt;
+
+### 2.2引入C++包含文件
+
+仍然在上个步骤的**目录**中
+
+在**C++包含文件**中添加目录：**include**，并移至顶部
+引入后如：**D:\EasyX\include**
+
+&lt;img width='1920' height='1017' alt='Image' src='https://github.com/user-attachments/assets/024b9cb0-56ad-4e79-a84f-53f8bad02881' /&gt;
+
+## 3.配置链接参数
+
+在上个步骤的**编译器选项**中，点击**自动链接**，并依次添加**EaxyX**两个头文件的链接参数
+
+&lt;img width='1920' height='1017' alt='Image' src='https://github.com/user-attachments/assets/703f097f-8db4-4f5b-83b5-db81ac273204' /&gt;
+
+对于**项目**来说，需要在**项目→项目属性→参数→链接器**中输入`-leasyx -lgdi32 -lole32`，如果是编译运行**单个.cpp文件**则不用这步
+
+&lt;img width='1920' height='1017' alt='Image' src='https://github.com/user-attachments/assets/3be56de7-8a8e-4265-92ec-35374c7c983d' /&gt;
+
+## 4.使用EasyX库
+
+上面的步骤完成后就可以使用了，用下面的示例代码测试一下
+
+```c++
+#include &lt;conio.h&gt;
+#include &lt;easyx.h&gt;
+
+int main()
+{
+	initgraph(500, 500);
+	circle(250, 250, 220);
+	_getch();
+	closegraph();
+	return 0;
+}
+```
+
+演示效果
+
+&lt;img width='1920' height='1017' alt='Image' src='https://github.com/user-attachments/assets/13017992-aa3f-47dd-b9d3-c85f2dafd0a3' /&gt;
+
+可以看到成功绘制出图像！但编译器有个警告：**[Warning] ignoring '#pragma comment ' [-Wunknown-pragmas]**，直接忽略即可。</description><guid isPermaLink="true">https://fireLhq.github.io/post/ru-he-zai-Dev-C%2B%2B-zhong-shi-yong-EasyX-tu-xing-ku.html</guid><pubDate>Tue, 04 Aug 2026 02:14:42 +0000</pubDate></item><item><title>如何在Linux服务器中安装“Clash Verge（内核为Mihomo）”</title><link>https://fireLhq.github.io/post/ru-he-zai-Linux-fu-wu-qi-zhong-an-zhuang-%E2%80%9CClash%20Verge%EF%BC%88-nei-he-wei-Mihomo%EF%BC%89%E2%80%9D.html</link><description># 文章以Ubuntu 22.04 Server为例
 
 ## 前言
 
