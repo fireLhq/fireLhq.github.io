@@ -1,4 +1,4 @@
-# 文章以Ubuntu 22.04 Server为例
+# Ubuntu Server配置Mihomo应用的方法
 
 ## 前言
 
@@ -18,11 +18,11 @@ Mihomo是Clash Verge的内核，因此该方法建立在使用过**Clash Verge R
 1. Country.mmdb
 2. profiles/xxxxxxxx.yaml
 
-<img width="804" height="468" alt="Image" src="https://github.com/user-attachments/assets/765471fd-4d04-488c-bdd6-9fa8d2c40f35" />
+<img width="804" height="468" alt="Image" src="https://github.com/user-attachments/assets/1770970c-af5a-4ab7-aae9-794aa7505f21" />
 
-<img width="771" height="374" alt="Image" src="https://github.com/user-attachments/assets/7a99e3be-9419-492f-8d96-f2ce03b30799" />
+<img width="771" height="374" alt="Image" src="https://github.com/user-attachments/assets/df248dd1-8786-405a-b86b-050b17de4a17" />
 
-**注** 将用户名替换为自己电脑的实际用户名。yaml文件可能有多个，原因是你之前使用过多个配置；如果不确定哪个有效，可以用文本查看工具（如记事本）打开并对比下面的节点和`Clash Verge`中的节点区别，从而精准找到。
+**注：**将用户名替换为自己电脑的实际用户名。yaml文件可能有多个，原因是你之前使用过多个配置；如果不确定哪个有效，可以用文本查看工具（如记事本）打开并对比下面的节点和`Clash Verge`中的节点区别，从而精准找到。
 
 ## 步骤2：安装和配置Mihomo
 
@@ -40,10 +40,10 @@ wget https://github.com/MetaCubeX/mihomo/releases/download/v1.19.29/mihomo-linux
 gunzip mihomo-linux-amd64-v1.19.29.gz
 ```
 
-- 重命名为clash
+- 重命名为mihomo
 
 ```shell
-mv mihomo-linux-amd64-v1.19.29.gz mihomo
+mv mihomo-linux-amd64-v1.19.29 mihomo
 ```
 
 - 移动到`/usr/local/bin/`目录下（方便在任何位置调用Mihomo）
@@ -84,16 +84,16 @@ sudo mv Country.mmdb config.yaml /etc/mihomo/
 sudo vim /etc/mihomo/config.yaml
 ```
 
-- 找到配置文件中的`external-controller`字段（管理面板默认是9093，不是7890）
+- 找到配置文件中的`external-controller`字段（管理面板一般默认是9090，不是7890，配置文件中也可能是90xx，可以自己改成9090或其它）
 
 ```yaml
-external-controller: '127.0.0.1:9093'
+external-controller: '127.0.0.1:9090'
 ```
 
-- 把值改为`'0.0.0.0:9093'`（这样在同一局域网下就可以被其他主机访问）
+- 把值改为`'0.0.0.0:9090'`（这样在同一局域网下就可以被其他主机访问）
 
 ```yaml
-external-controller: '0.0.0.0:9093'
+external-controller: '0.0.0.0:9090'
 secret: 'xxxxxxxxxx' # 设置 web ui 密钥（可选，默认没有此行）
 ```
 
@@ -162,7 +162,7 @@ sudo vim /etc/mihomo/config.yaml
 - 在`external-controller`字段后添加一个`external-ui`字段（`external-ui`指向的是解压后的目录）
 
 ```yaml
-external-controller: '0.0.0.0:9093'
+external-controller: '0.0.0.0:9090'
 external-ui: /etc/mihomo/ui
 secret: 'xxxxxxxxxx' # 设置 web ui 密钥（可选，默认没有此行）
 ```
@@ -184,18 +184,20 @@ sudo systemctl restart mihomo # 重启服务
 
 ### 在线管理Mihomo
 
-- 在可以连接Ubuntu服务器的其他主机的浏览器上输入`http://<服务器IP>:9093/ui`访问管理面板
-- API 地址 / Host：`http://<服务器IP>:9093`
-- Secret / Password：填入你在 `/etc/mihomo/config.yaml` 中设置的 `secret`（如果没设留空即可）
+- 在可以连接Ubuntu服务器的其他主机的浏览器上输入`http://<服务器IP>:9090/ui`访问管理面板
+- 后端地址：`http://<服务器IP>:9090`
+- 密钥 / Secret：填入你在 `/etc/mihomo/config.yaml` 中设置的 `secret`（如果没设置，留空即可）
+
+<img width="1910" height="896" alt="Image" src="https://github.com/user-attachments/assets/dd32df52-25be-42e3-98f6-141c8c96eac0" />
+
 - 概览页面查看实时流量使用情况和网络延迟
 
-<img width="1910" height="896" alt="Image" src="https://github.com/user-attachments/assets/2a128693-6b7d-402c-9f62-6bc7d3a190cd" />
+<img width="1910" height="896" alt="Image" src="https://github.com/user-attachments/assets/a60e4fa8-74b9-41c6-a646-5ed457a3cede" />
 
-<img width="1910" height="896" alt="Image" src="https://github.com/user-attachments/assets/cdc182a2-664f-44b8-a8e9-130db68c1c52" />
+<img width="1910" height="896" alt="Image" src="https://github.com/user-attachments/assets/f793ea71-5457-4fe9-a0d4-ed12f5d0e0bb" />
 
 - 配置页面可以查看和切换节点
 
-<img width="1910" height="896" alt="Image" src="https://github.com/user-attachments/assets/84eab635-2832-4c07-b769-698d68840c12" />
+<img width="1910" height="896" alt="Image" src="https://github.com/user-attachments/assets/767a450f-d9c0-4cea-81ec-df7d9af78f7b" />
 
 - 其它页面可自行探索
-

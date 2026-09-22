@@ -10,7 +10,7 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="# 文章以Ubuntu 22.04 Server为例
+<meta name="description" content="# Ubuntu Server配置Mihomo应用的方法
 
 ## 前言
 
@@ -30,13 +30,13 @@ Mihomo是Clash Verge的内核，因此该方法建立在使用过**Clash Verge R
 1. Country.mmdb
 2. profiles/xxxxxxxx.yaml
 
-<img width='804' height='468' alt='Image' src='https://github.com/user-attachments/assets/765471fd-4d04-488c-bdd6-9fa8d2c40f35' />
+<img width='804' height='468' alt='Image' src='https://github.com/user-attachments/assets/1770970c-af5a-4ab7-aae9-794aa7505f21' />
 
-<img width='771' height='374' alt='Image' src='https://github.com/user-attachments/assets/7a99e3be-9419-492f-8d96-f2ce03b30799' />
+<img width='771' height='374' alt='Image' src='https://github.com/user-attachments/assets/df248dd1-8786-405a-b86b-050b17de4a17' />
 
-**注** 将用户名替换为自己电脑的实际用户名。">
+**注：**将用户名替换为自己电脑的实际用户名。">
 <meta property="og:title" content="如何在Linux服务器中安装Clash Verge（Mihomo）">
-<meta property="og:description" content="# 文章以Ubuntu 22.04 Server为例
+<meta property="og:description" content="# Ubuntu Server配置Mihomo应用的方法
 
 ## 前言
 
@@ -56,11 +56,11 @@ Mihomo是Clash Verge的内核，因此该方法建立在使用过**Clash Verge R
 1. Country.mmdb
 2. profiles/xxxxxxxx.yaml
 
-<img width='804' height='468' alt='Image' src='https://github.com/user-attachments/assets/765471fd-4d04-488c-bdd6-9fa8d2c40f35' />
+<img width='804' height='468' alt='Image' src='https://github.com/user-attachments/assets/1770970c-af5a-4ab7-aae9-794aa7505f21' />
 
-<img width='771' height='374' alt='Image' src='https://github.com/user-attachments/assets/7a99e3be-9419-492f-8d96-f2ce03b30799' />
+<img width='771' height='374' alt='Image' src='https://github.com/user-attachments/assets/df248dd1-8786-405a-b86b-050b17de4a17' />
 
-**注** 将用户名替换为自己电脑的实际用户名。">
+**注：**将用户名替换为自己电脑的实际用户名。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://fireLhq.github.io/post/ru-he-zai-Linux-fu-wu-qi-zhong-an-zhuang-Clash%20Verge%EF%BC%88Mihomo%EF%BC%89.html">
 <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
@@ -131,7 +131,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><h1>文章以Ubuntu 22.04 Server为例</h1>
+<div class="markdown-body" id="postBody"><h1>Ubuntu Server配置Mihomo应用的方法</h1>
 <h2>前言</h2>
 <p>Mihomo是Clash Verge的内核，因此该方法建立在使用过<strong>Clash Verge Rev</strong>的基础上</p>
 <h2>步骤</h2>
@@ -147,9 +147,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <li>Country.mmdb</li>
 <li>profiles/xxxxxxxx.yaml</li>
 </ol>
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/765471fd-4d04-488c-bdd6-9fa8d2c40f35"><img width="804" height="468" alt="Image" src="https://github.com/user-attachments/assets/765471fd-4d04-488c-bdd6-9fa8d2c40f35" style="max-width: 100%; height: auto; max-height: 468px;; aspect-ratio: 804 / 468; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/7a99e3be-9419-492f-8d96-f2ce03b30799"><img width="771" height="374" alt="Image" src="https://github.com/user-attachments/assets/7a99e3be-9419-492f-8d96-f2ce03b30799" style="max-width: 100%; height: auto; max-height: 374px;; aspect-ratio: 771 / 374; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
-<p><strong>注</strong> 将用户名替换为自己电脑的实际用户名。yaml文件可能有多个，原因是你之前使用过多个配置；如果不确定哪个有效，可以用文本查看工具（如记事本）打开并对比下面的节点和<code class="notranslate">Clash Verge</code>中的节点区别，从而精准找到。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/1770970c-af5a-4ab7-aae9-794aa7505f21"><img width="804" height="468" alt="Image" src="https://github.com/user-attachments/assets/1770970c-af5a-4ab7-aae9-794aa7505f21" style="max-width: 100%; height: auto; max-height: 468px;; aspect-ratio: 804 / 468; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/df248dd1-8786-405a-b86b-050b17de4a17"><img width="771" height="374" alt="Image" src="https://github.com/user-attachments/assets/df248dd1-8786-405a-b86b-050b17de4a17" style="max-width: 100%; height: auto; max-height: 374px;; aspect-ratio: 771 / 374; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
+<p>**注：**将用户名替换为自己电脑的实际用户名。yaml文件可能有多个，原因是你之前使用过多个配置；如果不确定哪个有效，可以用文本查看工具（如记事本）打开并对比下面的节点和<code class="notranslate">Clash Verge</code>中的节点区别，从而精准找到。</p>
 <h2>步骤2：安装和配置Mihomo</h2>
 <h3>安装Mihomo</h3>
 <ul>
@@ -161,9 +161,9 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </ul>
 <div class="highlight highlight-source-shell"><pre class="notranslate">gunzip mihomo-linux-amd64-v1.19.29.gz</pre></div>
 <ul>
-<li>重命名为clash</li>
+<li>重命名为mihomo</li>
 </ul>
-<div class="highlight highlight-source-shell"><pre class="notranslate">mv mihomo-linux-amd64-v1.19.29.gz mihomo</pre></div>
+<div class="highlight highlight-source-shell"><pre class="notranslate">mv mihomo-linux-amd64-v1.19.29 mihomo</pre></div>
 <ul>
 <li>移动到<code class="notranslate">/usr/local/bin/</code>目录下（方便在任何位置调用Mihomo）</li>
 </ul>
@@ -190,13 +190,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </ul>
 <div class="highlight highlight-source-shell"><pre class="notranslate">sudo vim /etc/mihomo/config.yaml</pre></div>
 <ul>
-<li>找到配置文件中的<code class="notranslate">external-controller</code>字段（管理面板默认是9093，不是7890）</li>
+<li>找到配置文件中的<code class="notranslate">external-controller</code>字段（管理面板一般默认是9090，不是7890，配置文件中也可能是90xx，可以自己改成9090或其它）</li>
 </ul>
-<div class="highlight highlight-source-yaml"><pre class="notranslate"><span class="pl-ent">external-controller</span>: <span class="pl-s"><span class="pl-pds">'</span>127.0.0.1:9093<span class="pl-pds">'</span></span></pre></div>
+<div class="highlight highlight-source-yaml"><pre class="notranslate"><span class="pl-ent">external-controller</span>: <span class="pl-s"><span class="pl-pds">'</span>127.0.0.1:9090<span class="pl-pds">'</span></span></pre></div>
 <ul>
-<li>把值改为<code class="notranslate">'0.0.0.0:9093'</code>（这样在同一局域网下就可以被其他主机访问）</li>
+<li>把值改为<code class="notranslate">'0.0.0.0:9090'</code>（这样在同一局域网下就可以被其他主机访问）</li>
 </ul>
-<div class="highlight highlight-source-yaml"><pre class="notranslate"><span class="pl-ent">external-controller</span>: <span class="pl-s"><span class="pl-pds">'</span>0.0.0.0:9093<span class="pl-pds">'</span></span>
+<div class="highlight highlight-source-yaml"><pre class="notranslate"><span class="pl-ent">external-controller</span>: <span class="pl-s"><span class="pl-pds">'</span>0.0.0.0:9090<span class="pl-pds">'</span></span>
 <span class="pl-ent">secret</span>: <span class="pl-s"><span class="pl-pds">'</span>xxxxxxxxxx<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> 设置 web ui 密钥（可选，默认没有此行）</span></pre></div>
 <h2>步骤3：注册为系统服务</h2>
 <ul>
@@ -262,7 +262,7 @@ sudo tar -zxf compressed-dist.tgz</pre></div>
 <ul>
 <li>在<code class="notranslate">external-controller</code>字段后添加一个<code class="notranslate">external-ui</code>字段（<code class="notranslate">external-ui</code>指向的是解压后的目录）</li>
 </ul>
-<div class="highlight highlight-source-yaml"><pre class="notranslate"><span class="pl-ent">external-controller</span>: <span class="pl-s"><span class="pl-pds">'</span>0.0.0.0:9093<span class="pl-pds">'</span></span>
+<div class="highlight highlight-source-yaml"><pre class="notranslate"><span class="pl-ent">external-controller</span>: <span class="pl-s"><span class="pl-pds">'</span>0.0.0.0:9090<span class="pl-pds">'</span></span>
 <span class="pl-ent">external-ui</span>: <span class="pl-s">/etc/mihomo/ui</span>
 <span class="pl-ent">secret</span>: <span class="pl-s"><span class="pl-pds">'</span>xxxxxxxxxx<span class="pl-pds">'</span></span> <span class="pl-c"><span class="pl-c">#</span> 设置 web ui 密钥（可选，默认没有此行）</span></pre></div>
 <ul>
@@ -278,17 +278,20 @@ sudo systemctl stop mihomo <span class="pl-c"><span class="pl-c">#</span> 停止
 sudo systemctl restart mihomo <span class="pl-c"><span class="pl-c">#</span> 重启服务</span></pre></div>
 <h3>在线管理Mihomo</h3>
 <ul>
-<li>在可以连接Ubuntu服务器的其他主机的浏览器上输入<code class="notranslate">http://&lt;服务器IP&gt;:9093/ui</code>访问管理面板</li>
-<li>API 地址 / Host：<code class="notranslate">http://&lt;服务器IP&gt;:9093</code></li>
-<li>Secret / Password：填入你在 <code class="notranslate">/etc/mihomo/config.yaml</code> 中设置的 <code class="notranslate">secret</code>（如果没设留空即可）</li>
+<li>在可以连接Ubuntu服务器的其他主机的浏览器上输入<code class="notranslate">http://&lt;服务器IP&gt;:9090/ui</code>访问管理面板</li>
+<li>后端地址：<code class="notranslate">http://&lt;服务器IP&gt;:9090</code></li>
+<li>密钥 / Secret：填入你在 <code class="notranslate">/etc/mihomo/config.yaml</code> 中设置的 <code class="notranslate">secret</code>（如果没设置，留空即可）</li>
+</ul>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/dd32df52-25be-42e3-98f6-141c8c96eac0"><img width="1910" height="896" alt="Image" src="https://github.com/user-attachments/assets/dd32df52-25be-42e3-98f6-141c8c96eac0" style="max-width: 100%; height: auto; max-height: 896px;; aspect-ratio: 1910 / 896; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
+<ul>
 <li>概览页面查看实时流量使用情况和网络延迟</li>
 </ul>
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/2a128693-6b7d-402c-9f62-6bc7d3a190cd"><img width="1910" height="896" alt="Image" src="https://github.com/user-attachments/assets/2a128693-6b7d-402c-9f62-6bc7d3a190cd" style="max-width: 100%; height: auto; max-height: 896px;; aspect-ratio: 1910 / 896; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/cdc182a2-664f-44b8-a8e9-130db68c1c52"><img width="1910" height="896" alt="Image" src="https://github.com/user-attachments/assets/cdc182a2-664f-44b8-a8e9-130db68c1c52" style="max-width: 100%; height: auto; max-height: 896px;; aspect-ratio: 1910 / 896; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/a60e4fa8-74b9-41c6-a646-5ed457a3cede"><img width="1910" height="896" alt="Image" src="https://github.com/user-attachments/assets/a60e4fa8-74b9-41c6-a646-5ed457a3cede" style="max-width: 100%; height: auto; max-height: 896px;; aspect-ratio: 1910 / 896; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/f793ea71-5457-4fe9-a0d4-ed12f5d0e0bb"><img width="1910" height="896" alt="Image" src="https://github.com/user-attachments/assets/f793ea71-5457-4fe9-a0d4-ed12f5d0e0bb" style="max-width: 100%; height: auto; max-height: 896px;; aspect-ratio: 1910 / 896; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
 <ul>
 <li>配置页面可以查看和切换节点</li>
 </ul>
-<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/84eab635-2832-4c07-b769-698d68840c12"><img width="1910" height="896" alt="Image" src="https://github.com/user-attachments/assets/84eab635-2832-4c07-b769-698d68840c12" style="max-width: 100%; height: auto; max-height: 896px;; aspect-ratio: 1910 / 896; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/767a450f-d9c0-4cea-81ec-df7d9af78f7b"><img width="1910" height="896" alt="Image" src="https://github.com/user-attachments/assets/767a450f-d9c0-4cea-81ec-df7d9af78f7b" style="max-width: 100%; height: auto; max-height: 896px;; aspect-ratio: 1910 / 896; background-color: var(--bgColor-muted); border-radius: 6px" class="js-gh-image-fallback"></a></p>
 <ul>
 <li>其它页面可自行探索</li>
 </ul></div>
